@@ -65,6 +65,7 @@
                   {%- for childlink in link.links -%}
                     {%- assign childlink_image = childlink.object.featured_image | default: childlink.object.image -%}
                     {%- assign childlink_label = childlink.object.type -%}
+                    {%- assign childlink_name = childlink.title | split: ' — ' | first | split: ' – ' | first | split: ' - ' | first | strip -%}
                     <li>
                       <a
                         href="{{ childlink.url }}"
@@ -77,7 +78,7 @@
                         {%- endif -%}
                         <span class="gn-mnav__sublink-text">
                           {%- if childlink_label != blank -%}<span class="gn-mnav__sublink-label">{{ childlink_label | escape }}</span>{%- endif -%}
-                          <span class="gn-mnav__sublink-name">{{ childlink.title | escape }}</span>
+                          <span class="gn-mnav__sublink-name">{{ childlink_name | escape }}</span>
                         </span>
                       </a>
                     </li>
