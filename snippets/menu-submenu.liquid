@@ -8,7 +8,7 @@
     <li class="submenu-container">
       <a href="{{ childlink.url }}" class="submenu__item shop-dropdown__row {{ size }}">
         {%- if childlink_image != blank -%}
-        <span class="shop-dropdown__thumb">{{ childlink_image | image_url: width: 160 | image_tag: loading: 'lazy', widths: '80,160', sizes: '64px', alt: childlink.title }}</span>
+        <span class="shop-dropdown__thumb">{{ childlink_image | image_url: width: 220 | image_tag: loading: 'lazy', widths: '88,176,220', sizes: '88px', alt: childlink.title }}</span>
         {%- else -%}
         <span class="shop-dropdown__thumb shop-dropdown__thumb--empty"></span>
         {%- endif -%}
@@ -36,7 +36,7 @@
     <li>
       <a href="{{ childlink.url }}" class="submenu__item shop-dropdown__row {{ size }}">
         {%- if childlink_image != blank -%}
-        <span class="shop-dropdown__thumb">{{ childlink_image | image_url: width: 160 | image_tag: loading: 'lazy', widths: '80,160', sizes: '64px', alt: childlink.title }}</span>
+        <span class="shop-dropdown__thumb">{{ childlink_image | image_url: width: 220 | image_tag: loading: 'lazy', widths: '88,176,220', sizes: '88px', alt: childlink.title }}</span>
         {%- else -%}
         <span class="shop-dropdown__thumb shop-dropdown__thumb--empty"></span>
         {%- endif -%}

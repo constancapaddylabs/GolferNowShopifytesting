@@ -71,7 +71,7 @@
                         class="gn-mnav__sublink gn-mnav__sublink--product{% if childlink.current %} is-active{% endif %}"
                       >
                         {%- if childlink_image != blank -%}
-                        <span class="gn-mnav__sublink-thumb">{{ childlink_image | image_url: width: 128 | image_tag: loading: 'lazy', widths: '64,128', sizes: '64px', alt: childlink.title }}</span>
+                        <span class="gn-mnav__sublink-thumb">{{ childlink_image | image_url: width: 180 | image_tag: loading: 'lazy', widths: '72,144,180', sizes: '72px', alt: childlink.title }}</span>
                         {%- else -%}
                         <span class="gn-mnav__sublink-thumb gn-mnav__sublink-thumb--empty"></span>
                         {%- endif -%}
