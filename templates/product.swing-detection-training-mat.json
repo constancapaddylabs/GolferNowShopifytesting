@@ -1,0 +1,377 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "hero": {
+      "type": "gn-arc-one-hero",
+      "blocks": {
+        "trust_1": {
+          "type": "trust",
+          "settings": {
+            "icon": "truck",
+            "text": "Free shipping"
+          }
+        },
+        "trust_2": {
+          "type": "trust",
+          "settings": {
+            "icon": "shield",
+            "text": "30-day returns"
+          }
+        },
+        "trust_3": {
+          "type": "trust",
+          "settings": {
+            "icon": "globe",
+            "text": "Worldwide shipping"
+          }
+        },
+        "bundle_1": {
+          "type": "bundle",
+          "settings": {
+            "quantity": 1,
+            "save_amount": 0,
+            "popular": false
+          }
+        },
+        "bundle_2": {
+          "type": "bundle",
+          "settings": {
+            "quantity": 2,
+            "save_amount": 15,
+            "popular": true
+          }
+        },
+        "bundle_3": {
+          "type": "bundle",
+          "settings": {
+            "quantity": 3,
+            "save_amount": 20,
+            "popular": false
+          }
+        }
+      },
+      "block_order": [
+        "trust_1",
+        "trust_2",
+        "trust_3",
+        "bundle_1",
+        "bundle_2",
+        "bundle_3"
+      ],
+      "settings": {
+        "eyebrow_text": "TRACE ONE",
+        "heading": "DETECTION MAT",
+        "tagline": "See your swing path and low point after every strike.",
+        "benefit_1": "Improve your stroke, unlock pro level ball-striking",
+        "benefit_2": "Analyse and refine your swing and contact",
+        "benefit_3": "Take your accuracy to the next level",
+        "show_review_strip": true,
+        "star_color": "yellow",
+        "show_bestfor": true,
+        "bestfor_style": "muted",
+        "bestfor_label": "Best for:",
+        "bestfor_value": "Perfecting your connection.",
+        "bestfor_muted_text": "Perfecting your connection",
+        "review_rating": "4.9",
+        "review_sold_text": "10,000+ sold",
+        "stage_label": "What the mat shows",
+        "signal_label_1": "Path is off",
+        "signal_text_1": "The scuff angles across the target line.",
+        "signal_label_2": "Path is true",
+        "signal_text_2": "The mark runs center and down the line.",
+        "quantity_label": "Qty",
+        "add_to_cart_text": "Add to cart",
+        "choose_options_text": "Choose options",
+        "sold_out_text": "Sold out",
+        "sale_badge_text": "Sale",
+        "show_dynamic_checkout": false,
+        "show_sticky_atc": true,
+        "product_image_override": "shopify://shop_images/4d75e671-e84d-4fac-af14-6597e3a2ffdd.png",
+        "product_image_alt": "",
+        "enable_pulse": false,
+        "pulse_speed": 2.5,
+        "overlay_opacity": 65,
+        "background_color": "#ffffff",
+        "ink_color": "#182b20",
+        "muted_color": "#4a4a44",
+        "accent_color": "#1d3d2a",
+        "divider_color": "#d8d3c4",
+        "stage_color": "#1d3d2a",
+        "stage_text_color": "#f5f3ec",
+        "stage_accent": "#4d846e",
+        "min_height": 480,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "band": {
+      "type": "gn-arc-one-band",
+      "settings": {
+        "eyebrow": "",
+        "text": "If the scuff cuts across the line, your path lied to your feel.",
+        "align": "center",
+        "background_color": "#1d3d2a",
+        "text_color": "#f5f3ec",
+        "accent_color": "#9fc3b0",
+        "padding_top": 10,
+        "padding_bottom": 10
+      }
+    },
+    "story": {
+      "type": "gn-arc-one-story",
+      "blocks": {
+        "contrast_1": {
+          "type": "contrast",
+          "settings": {
+            "label": "Usual problem",
+            "title": "Feel and flight don’t match",
+            "copy": "You thought it was square. The ball curved anyway. Without a mark, thin, fat, and path mistakes all feel similar."
+          }
+        },
+        "contrast_2": {
+          "type": "contrast",
+          "settings": {
+            "label": "With TRACE ONE",
+            "title": "Every swing leaves evidence",
+            "copy": "The mat prints your path and low point. Adjust, swing again, and watch the mark move toward center."
+          }
+        },
+        "beat_1": {
+          "type": "beat",
+          "settings": {
+            "time": "1 min",
+            "title": "Baseline a few swings",
+            "copy": "Place the ball on the center marker. Make easy swings and just read the scuffs. No fixing yet."
+          }
+        },
+        "beat_2": {
+          "type": "beat",
+          "settings": {
+            "time": "3 min",
+            "title": "Correct toward the target line",
+            "copy": "Use the path dashes as a reference. Keep adjusting until the mark sits more centered and straighter."
+          }
+        },
+        "beat_3": {
+          "type": "beat",
+          "settings": {
+            "time": "1 min",
+            "title": "Confirm with a real ball flight",
+            "copy": "Hit a few shots off the mat or take the same feel to the range and check the flight."
+          }
+        },
+        "spec_1": {
+          "type": "spec",
+          "settings": {
+            "label": "Surface",
+            "value": "Durable strike mat with path guides"
+          }
+        },
+        "spec_2": {
+          "type": "spec",
+          "settings": {
+            "label": "Markers",
+            "value": "Ball spot, target line, path dashes"
+          }
+        },
+        "spec_3": {
+          "type": "spec",
+          "settings": {
+            "label": "Feedback",
+            "value": "Visible scuff after every swing"
+          }
+        },
+        "spec_4": {
+          "type": "spec",
+          "settings": {
+            "label": "Where",
+            "value": "Garage, patio, or range mat"
+          }
+        }
+      },
+      "block_order": [
+        "contrast_1",
+        "contrast_2",
+        "beat_1",
+        "beat_2",
+        "beat_3",
+        "spec_1",
+        "spec_2",
+        "spec_3",
+        "spec_4"
+      ],
+      "settings": {
+        "eyebrow_text": "The problem it solves",
+        "heading": "<p>Strike and path are hard to feel. TRACE ONE prints them.</p>",
+        "copy": "<p>This isn’t a generic turf mat. The center marker, target line, and path dashes give you a frame — and the scuff after impact tells you whether the club came in-to-out, out-to-in, or through the middle.</p>",
+        "ritual_heading": "A simple 5-minute path drill",
+        "note": "One job per session: move the mark closer to center.",
+        "panel_style": "strike",
+        "panel_eyebrow": "How to read it",
+        "panel_title": "Setup square. Then trust the scuff.",
+        "panel_copy": "The guides help you aim. The mark after the swing is the truth — path angle and low point in one glance.",
+        "diagram_heading": "Reading the mat",
+        "diagram_top_label": "TOP",
+        "diagram_marker": "CLICK",
+        "diagram_bottom_label": "IMPACT",
+        "arc_label_early": "Too soon",
+        "early_title": "Ball on the center spot",
+        "early_copy": "Align to the target line. Use the side dashes as path references.",
+        "arc_label_later": "Better",
+        "later_title": "Swing and read the scuff",
+        "later_copy": "Angled mark = path problem. Short/high mark = low-point problem. Center and straight = keep it.",
+        "meta_value_1": "5 min",
+        "meta_label_1": "Session",
+        "meta_value_2": "Path",
+        "meta_label_2": "Focus",
+        "meta_value_3": "Mark",
+        "meta_label_3": "Feedback",
+        "background_color": "#ffffff",
+        "heading_color": "#182b20",
+        "text_color": "#4a4a44",
+        "accent_color": "#1d3d2a",
+        "divider_color": "#d8d3c4",
+        "panel_background": "#f2eee3",
+        "panel_diagram_bg": "#faf8f2",
+        "panel_heading": "#182b20",
+        "panel_text": "#4a4a44",
+        "panel_accent": "#1d3d2a",
+        "panel_muted": "#8a8578",
+        "panel_divider": "#d8d3c4",
+        "padding_top": 20,
+        "padding_bottom": 80
+      }
+    },
+    "system": {
+      "type": "gn-arc-one-system",
+      "blocks": {
+        "step_1": {
+          "type": "system_step",
+          "settings": {
+            "number": "01",
+            "step_name": "Link",
+            "current": false
+          }
+        },
+        "step_2": {
+          "type": "system_step",
+          "settings": {
+            "number": "02",
+            "step_name": "Arc",
+            "current": false
+          }
+        },
+        "step_3": {
+          "type": "system_step",
+          "settings": {
+            "number": "03",
+            "step_name": "Trace",
+            "current": true
+          }
+        },
+        "step_4": {
+          "type": "system_step",
+          "settings": {
+            "number": "04",
+            "step_name": "Line",
+            "current": false
+          }
+        }
+      },
+      "block_order": [
+        "step_1",
+        "step_2",
+        "step_3",
+        "step_4"
+      ],
+      "settings": {
+        "eyebrow_text": "Part of the Golfer Now system",
+        "heading": "TRACE ONE covers strike.",
+        "copy": "Four tools, four jobs. TRACE ONE trains path and low point. LINK covers arm connection, ARC covers release timing, LINE covers putting start.",
+        "link_text": "See the other tools",
+        "link_url": "",
+        "background_color": "#f2eee3",
+        "rail_background": "#faf8f2",
+        "heading_color": "#182b20",
+        "text_color": "#4a4a44",
+        "accent_color": "#1d3d2a",
+        "divider_color": "#d8d3c4",
+        "current_text_color": "#f5f3ec",
+        "current_accent": "#9fc3b0",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "faq": {
+      "type": "gn-arc-one-faq",
+      "blocks": {
+        "faq_1": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What does TRACE ONE show that a normal mat doesn’t?",
+            "answer": "<p>Printed path guides plus a surface that holds a readable scuff — so you can see swing direction and low point, not just that you hit turf.</p>"
+          }
+        },
+        "faq_2": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Do I need to hit real balls?",
+            "answer": "<p>You can take dry swings into the mat or hit balls off it. The mark is useful either way; ball flight is a bonus confirmation.</p>"
+          }
+        },
+        "faq_3": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Will it work indoors?",
+            "answer": "<p>Yes — garage or patio with room to swing. Use a net if you’re hitting balls.</p>"
+          }
+        },
+        "faq_4": {
+          "type": "faq_item",
+          "settings": {
+            "question": "How do I clear old marks?",
+            "answer": "<p>Most scuffs fade with use or wipe off. You’re looking for the latest mark relative to the center line, not a permanent print.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_1",
+        "faq_2",
+        "faq_3",
+        "faq_4"
+      ],
+      "settings": {
+        "heading": "Common questions",
+        "cta_heading": "Ready to see your path?",
+        "cta_copy": "A readable mark after every swing beats another bucket where feel and flight never agree.",
+        "cta_button_text": "Add TRACE ONE",
+        "background_color": "#f2eee3",
+        "heading_color": "#182b20",
+        "text_color": "#4a4a44",
+        "accent_color": "#1d3d2a",
+        "divider_color": "#d8d3c4",
+        "cta_background": "#1d3d2a",
+        "cta_text_color": "#f5f3ec",
+        "cta_button_background": "#f5f1e8",
+        "cta_button_text_color": "#1d3d2a",
+        "padding_top": 70,
+        "padding_bottom": 80
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "band",
+    "story",
+    "system",
+    "faq"
+  ]
+}

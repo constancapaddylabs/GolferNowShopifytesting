@@ -1,0 +1,267 @@
+{%- liquid
+  assign faq_bg = section.settings.background_color | default: '#f2eee3'
+  if faq_bg == blank or faq_bg == '#ffffff' or faq_bg == '#fff' or faq_bg == 'white'
+    assign faq_bg = '#f2eee3'
+  endif
+-%}
+<style>
+  #shopify-section-{{ section.id }} {
+    background: {{ faq_bg }};
+  }
+  #shopify-section-{{ section.id }} .gn-arc-faq {
+    background: {{ faq_bg }};
+    color: {{ section.settings.text_color }};
+    padding: {{ section.settings.padding_top }}px 32px {{ section.settings.padding_bottom }}px;
+  }
+  #shopify-section-{{ section.id }} .gn-arc-faq__inner {
+    max-width: 780px;
+    margin: 0 auto;
+  }
+  #shopify-section-{{ section.id }} .gn-arc-faq__heading {
+    margin: 0 0 36px;
+    text-align: center;
+    font-family: var(--font-body-family), sans-serif;
+    font-size: clamp(2rem, 4vw, 2.6rem);
+    line-height: 1.2;
+    font-weight: 700;
+    color: {{ section.settings.heading_color }};
+  }
+  #shopify-section-{{ section.id }} .gn-arc-faq__item {
+    border-top: 1px solid {{ section.settings.divider_color }};
+  }
+  #shopify-section-{{ section.id }} .gn-arc-faq__item:last-child {
+    border-bottom: 1px solid {{ section.settings.divider_color }};
+  }
+  #shopify-section-{{ section.id }} .gn-arc-faq__button {
+    width: 100%;
+    min-height: 64px;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 28px;
+    gap: 16px;
+    align-items: center;
+    padding: 18px 0;
+    border: 0;
+    background: transparent;
+    color: {{ section.settings.heading_color }};
+    font-size: 1.02rem;
+    font-weight: 700;
+    text-align: left;
+    cursor: pointer;
+  }
+  #shopify-section-{{ section.id }} .gn-arc-faq__icon {
+    width: 28px;
+    height: 28px;
+    border: 1px solid {{ section.settings.divider_color }};
+    border-radius: 50%;
+    position: relative;
+  }
+  #shopify-section-{{ section.id }} .gn-arc-faq__icon::before,
+  #shopify-section-{{ section.id }} .gn-arc-faq__icon::after {
+    content: "";
+    position: absolute;
+    inset: 50% auto auto 50%;
+    width: 12px;
+    height: 2px;
+    background: {{ section.settings.accent_color }};
+    transform: translate(-50%, -50%);
+  }
+  #shopify-section-{{ section.id }} .gn-arc-faq__icon::after {
+    transform: translate(-50%, -50%) rotate(90deg);
+    transition: opacity 150ms ease;
+  }
+  #shopify-section-{{ section.id }} .gn-arc-faq__button[aria-expanded="true"] .gn-arc-faq__icon::after {
+    opacity: 0;
+  }
+  #shopify-section-{{ section.id }} .gn-arc-faq__panel {
+    display: none;
+    padding: 0 36px 20px 0;
+    line-height: 1.65;
+  }
+  #shopify-section-{{ section.id }} .gn-arc-faq__panel.is-open {
+    display: block;
+  }
+  #shopify-section-{{ section.id }} .gn-arc-faq__cta {
+    margin-top: 56px;
+    padding: 48px 32px;
+    text-align: center;
+    background: {{ section.settings.cta_background }};
+    color: {{ section.settings.cta_text_color }};
+    border-radius: 8px;
+  }
+  #shopify-section-{{ section.id }} .gn-arc-faq__cta-heading {
+    margin: 0 0 12px;
+    font-family: var(--font-body-family), sans-serif;
+    font-size: clamp(1.8rem, 3vw, 2.4rem);
+    line-height: 1.15;
+    font-weight: 700;
+    color: {{ section.settings.cta_text_color }};
+  }
+  #shopify-section-{{ section.id }} .gn-arc-faq__cta-copy {
+    margin: 0 auto 24px;
+    max-width: 460px;
+    line-height: 1.55;
+    opacity: 0.82;
+  }
+  #shopify-section-{{ section.id }} .gn-arc-faq__cta-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 26px;
+    border: 0;
+    border-radius: 6px;
+    background: {{ section.settings.cta_button_background }};
+    color: {{ section.settings.cta_button_text_color }};
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  #shopify-section-{{ section.id }} .gn-arc-faq__cta-button:hover {
+    opacity: 0.9;
+  }
+  #shopify-section-{{ section.id }} .gn-arc-faq__cta-button svg {
+    width: 16px;
+    height: 16px;
+  }
+  @media (max-width: 749px) {
+    #shopify-section-{{ section.id }} .gn-arc-faq {
+      padding: 36px 20px 40px;
+    }
+    #shopify-section-{{ section.id }} .gn-arc-faq__heading {
+      margin-bottom: 20px;
+      font-size: clamp(1.6rem, 7vw, 2rem);
+    }
+    #shopify-section-{{ section.id }} .gn-arc-faq__button {
+      min-height: 52px;
+      padding: 14px 0;
+      gap: 12px;
+      font-size: 0.98rem;
+    }
+    #shopify-section-{{ section.id }} .gn-arc-faq__panel {
+      padding: 0 28px 14px 0;
+    }
+    #shopify-section-{{ section.id }} .gn-arc-faq__cta {
+      margin-top: 28px;
+      padding: 28px 18px;
+    }
+    #shopify-section-{{ section.id }} .gn-arc-faq__cta-heading {
+      margin-bottom: 8px;
+      font-size: clamp(1.45rem, 6vw, 1.85rem);
+    }
+    #shopify-section-{{ section.id }} .gn-arc-faq__cta-copy {
+      margin-bottom: 18px;
+    }
+  }
+</style>
+
+<div class="gn-arc-faq" id="gn-arc-faq-{{ section.id }}">
+  <div class="gn-arc-faq__inner">
+    {%- if section.settings.heading != blank -%}
+      <h2 class="gn-arc-faq__heading">{{ section.settings.heading }}</h2>
+    {%- endif -%}
+
+    {%- for block in section.blocks -%}
+      {%- if block.type == 'faq_item' -%}
+        {%- assign faq_id = 'gn-arc-faq-' | append: section.id | append: '-' | append: forloop.index -%}
+        <div class="gn-arc-faq__item" {{ block.shopify_attributes }}>
+          <button
+            class="gn-arc-faq__button"
+            type="button"
+            aria-expanded="false"
+            aria-controls="{{ faq_id }}"
+            data-gn-faq-button
+          >
+            <span>{{ block.settings.question }}</span>
+            <span class="gn-arc-faq__icon" aria-hidden="true"></span>
+          </button>
+          <div id="{{ faq_id }}" class="gn-arc-faq__panel" data-gn-faq-panel>
+            {{ block.settings.answer }}
+          </div>
+        </div>
+      {%- endif -%}
+    {%- endfor -%}
+
+    {%- if section.settings.cta_heading != blank or section.settings.cta_button_text != blank -%}
+      <div class="gn-arc-faq__cta">
+        {%- if section.settings.cta_heading != blank -%}
+          <h3 class="gn-arc-faq__cta-heading">{{ section.settings.cta_heading }}</h3>
+        {%- endif -%}
+        {%- if section.settings.cta_copy != blank -%}
+          <p class="gn-arc-faq__cta-copy">{{ section.settings.cta_copy }}</p>
+        {%- endif -%}
+        {%- if section.settings.cta_button_text != blank -%}
+          <button class="gn-arc-faq__cta-button" type="button" data-gn-add-to-cart>
+            {{ section.settings.cta_button_text }}
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+          </button>
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+  </div>
+</div>
+
+<script>
+  (() => {
+    const root = document.getElementById('gn-arc-faq-{{ section.id }}');
+    if (!root || root.dataset.gnReady === 'true') return;
+    root.dataset.gnReady = 'true';
+
+    root.querySelectorAll('[data-gn-faq-button]').forEach((button) => {
+      button.addEventListener('click', () => {
+        const panel = root.querySelector('#' + button.getAttribute('aria-controls'));
+        const expanded = button.getAttribute('aria-expanded') === 'true';
+        button.setAttribute('aria-expanded', String(!expanded));
+        if (panel) panel.classList.toggle('is-open', !expanded);
+      });
+    });
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "ONE series FAQ",
+  "tag": "section",
+  "enabled_on": {
+    "templates": ["product"]
+  },
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Questions before you train." },
+    { "type": "header", "content": "Closing CTA" },
+    { "type": "text", "id": "cta_heading", "label": "CTA heading", "default": "Start training better sequence today." },
+    { "type": "textarea", "id": "cta_copy", "label": "CTA copy", "default": "A few minutes of focused feedback beats another range session guessing." },
+    { "type": "text", "id": "cta_button_text", "label": "CTA button", "default": "Get ARC ONE" },
+    { "type": "header", "content": "Colors" },
+    { "type": "color", "id": "background_color", "label": "Background", "default": "#f2eee3" },
+    { "type": "color", "id": "heading_color", "label": "Heading", "default": "#182b20" },
+    { "type": "color", "id": "text_color", "label": "Text", "default": "#4a4a44" },
+    { "type": "color", "id": "accent_color", "label": "Accent", "default": "#1d3d2a" },
+    { "type": "color", "id": "divider_color", "label": "Dividers", "default": "#d8d3c4" },
+    { "type": "color", "id": "cta_background", "label": "CTA background", "default": "#1d3d2a" },
+    { "type": "color", "id": "cta_text_color", "label": "CTA text", "default": "#f5f3ec" },
+    { "type": "color", "id": "cta_button_background", "label": "CTA button", "default": "#f5f1e8" },
+    { "type": "color", "id": "cta_button_text_color", "label": "CTA button text", "default": "#1d3d2a" },
+    { "type": "header", "content": "Layout" },
+    { "type": "range", "id": "padding_top", "min": 0, "max": 150, "step": 5, "unit": "px", "label": "Top padding", "default": 70 },
+    { "type": "range", "id": "padding_bottom", "min": 0, "max": 150, "step": 5, "unit": "px", "label": "Bottom padding", "default": 80 }
+  ],
+  "blocks": [
+    {
+      "type": "faq_item",
+      "name": "FAQ item",
+      "settings": [
+        { "type": "text", "id": "question", "label": "Question", "default": "What does ARC ONE do?" },
+        { "type": "richtext", "id": "answer", "label": "Answer", "default": "<p>It gives audible feedback during practice swings so you can hear when your release is happening.</p>" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "ONE series FAQ",
+      "blocks": [
+        { "type": "faq_item", "settings": { "question": "What does ARC ONE do?" } },
+        { "type": "faq_item", "settings": { "question": "Do I need to hit balls?" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

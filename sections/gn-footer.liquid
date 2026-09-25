@@ -1,0 +1,462 @@
+<style>
+  :root {
+    --gn-footer-gap: {{ section.settings.margin_top | default: 56 }}px;
+  }
+
+  #shopify-section-{{ section.id }} {
+    margin-top: 0;
+  }
+
+  #MainContent > .shopify-section:last-child > div:first-of-type::after,
+  #MainContent > .shopify-section:last-child > section:first-of-type::after {
+    content: "";
+    display: block;
+    height: var(--gn-footer-gap);
+  }
+
+  #shopify-section-{{ section.id }} .gn-footer {
+    background: {{ section.settings.background_color | default: '#1d3d2a' }};
+    color: {{ section.settings.text_color | default: '#ffffff' }};
+    padding: {{ section.settings.padding_top | default: 64 }}px 32px {{ section.settings.padding_bottom | default: 32 }}px;
+  }
+  #shopify-section-{{ section.id }} .gn-footer__inner {
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+  #shopify-section-{{ section.id }} .gn-footer__grid {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+  #shopify-section-{{ section.id }} .gn-footer__column {
+    min-width: 0;
+  }
+  #shopify-section-{{ section.id }} .gn-footer__logo {
+    display: inline-block;
+    margin-bottom: 20px;
+    max-width: 100%;
+  }
+  #shopify-section-{{ section.id }} .gn-footer__logo img {
+    display: block;
+    width: {{ section.settings.logo_width | default: 140 }}px;
+    height: auto;
+  }
+  #shopify-section-{{ section.id }} .gn-footer__tagline {
+    margin: 0;
+    max-width: 280px;
+    font-size: 0.92rem;
+    line-height: 1.55;
+    color: rgba(255, 255, 255, 0.82);
+  }
+  #shopify-section-{{ section.id }} .gn-footer__heading {
+    margin: 0 0 18px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #ffffff;
+  }
+  #shopify-section-{{ section.id }} .gn-footer__links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  #shopify-section-{{ section.id }} .gn-footer__links li + li {
+    margin-top: 10px;
+  }
+  #shopify-section-{{ section.id }} .gn-footer__links a {
+    color: rgba(255, 255, 255, 0.82);
+    text-decoration: none;
+    font-size: 0.92rem;
+    line-height: 1.4;
+    transition: color 0.2s ease;
+  }
+  #shopify-section-{{ section.id }} .gn-footer__links a:hover {
+    color: #ffffff;
+  }
+  #shopify-section-{{ section.id }} .gn-footer__newsletter-text {
+    margin: 0 0 16px;
+    font-size: 0.92rem;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.82);
+  }
+  #shopify-section-{{ section.id }} .gn-footer__form {
+    margin: 0;
+  }
+  #shopify-section-{{ section.id }} .gn-footer__field {
+    position: relative;
+  }
+  #shopify-section-{{ section.id }} .gn-footer__input {
+    width: 100%;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 4px;
+    background: {{ section.settings.input_background | default: '#f7f5ef' }};
+    color: #1a1a1a;
+    padding: 14px 44px 14px 16px;
+    font-size: 0.92rem;
+    outline: none;
+  }
+  #shopify-section-{{ section.id }} .gn-footer__input::placeholder {
+    color: #767671;
+  }
+  #shopify-section-{{ section.id }} .gn-footer__submit {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    border: none;
+    background: transparent;
+    color: #1a1a1a;
+    padding: 4px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #shopify-section-{{ section.id }} .gn-footer__submit svg {
+    width: 18px;
+    height: 18px;
+  }
+  #shopify-section-{{ section.id }} .gn-footer__message {
+    margin: 10px 0 0;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.9);
+  }
+  #shopify-section-{{ section.id }} .gn-footer__divider {
+    height: 1px;
+    margin: 40px 0 20px;
+    background: rgba(255, 255, 255, 0.18);
+  }
+  #shopify-section-{{ section.id }} .gn-footer__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    font-size: 0.82rem;
+    color: rgba(255, 255, 255, 0.72);
+  }
+  @media (min-width: 990px) {
+    #shopify-section-{{ section.id }} .gn-footer__grid {
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 32px;
+    }
+    #shopify-section-{{ section.id }} .gn-footer__column--brand {
+      flex: 1.35 1 0;
+      max-width: 300px;
+    }
+    #shopify-section-{{ section.id }} .gn-footer__column--menu {
+      flex: 1 1 0;
+      min-width: 0;
+    }
+    #shopify-section-{{ section.id }} .gn-footer__column--newsletter {
+      flex: 1.1 1 0;
+      min-width: 0;
+      max-width: 260px;
+    }
+  }
+  @media (max-width: 989px) {
+    #shopify-section-{{ section.id }} .gn-footer {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    #shopify-section-{{ section.id }} .gn-footer__bottom {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+</style>
+
+<footer class="gn-footer">
+  <div class="gn-footer__inner">
+    <div class="gn-footer__grid">
+      <div class="gn-footer__column gn-footer__column--brand">
+        <a href="{{ routes.root_url }}" class="gn-footer__logo">
+          {%- if section.settings.logo != blank -%}
+            {{ section.settings.logo | image_url: width: 280 | image_tag: alt: shop.name, loading: 'lazy' }}
+          {%- else -%}
+            <span class="gn-footer__heading">{{ shop.name }}</span>
+          {%- endif -%}
+        </a>
+        {%- if section.settings.tagline != blank -%}
+          <p class="gn-footer__tagline">{{ section.settings.tagline }}</p>
+        {%- endif -%}
+      </div>
+
+      {%- assign shop_links = section.blocks | where: 'type', 'link' -%}
+      {%- assign has_shop_links = false -%}
+      {%- for block in shop_links -%}
+        {%- if block.settings.column == 'shop' and block.settings.label != blank and block.settings.url != blank -%}
+          {%- assign has_shop_links = true -%}
+          {%- break -%}
+        {%- endif -%}
+      {%- endfor -%}
+      {%- if has_shop_links -%}
+        <div class="gn-footer__column gn-footer__column--menu">
+          <p class="gn-footer__heading">{{ section.settings.shop_heading | default: 'Shop' | escape }}</p>
+          <ul class="gn-footer__links">
+            {%- for block in section.blocks -%}
+              {%- if block.type == 'link' and block.settings.column == 'shop' and block.settings.label != blank and block.settings.url != blank -%}
+                <li {{ block.shopify_attributes }}>
+                  <a href="{{ block.settings.url }}">{{ block.settings.label | escape }}</a>
+                </li>
+              {%- endif -%}
+            {%- endfor -%}
+          </ul>
+        </div>
+      {%- endif -%}
+
+      {%- assign has_support_links = false -%}
+      {%- for block in shop_links -%}
+        {%- if block.settings.column == 'support' and block.settings.label != blank and block.settings.url != blank -%}
+          {%- assign has_support_links = true -%}
+          {%- break -%}
+        {%- endif -%}
+      {%- endfor -%}
+      {%- if has_support_links -%}
+        <div class="gn-footer__column gn-footer__column--menu">
+          <p class="gn-footer__heading">{{ section.settings.support_heading | default: 'Support' | escape }}</p>
+          <ul class="gn-footer__links">
+            {%- for block in section.blocks -%}
+              {%- if block.type == 'link' and block.settings.column == 'support' and block.settings.label != blank and block.settings.url != blank -%}
+                <li {{ block.shopify_attributes }}>
+                  <a href="{{ block.settings.url }}">{{ block.settings.label | escape }}</a>
+                </li>
+              {%- endif -%}
+            {%- endfor -%}
+          </ul>
+        </div>
+      {%- endif -%}
+
+      {%- for block in section.blocks -%}
+        {%- if block.type == 'newsletter' -%}
+          <div class="gn-footer__column gn-footer__column--newsletter" {{ block.shopify_attributes }}>
+            {%- if block.settings.heading != blank -%}
+              <p class="gn-footer__heading">{{ block.settings.heading | escape }}</p>
+            {%- endif -%}
+            {%- if block.settings.description != blank -%}
+              <p class="gn-footer__newsletter-text">{{ block.settings.description }}</p>
+            {%- endif -%}
+            {%- form 'customer', class: 'gn-footer__form' -%}
+              <input type="hidden" name="contact[tags]" value="newsletter">
+              <div class="gn-footer__field">
+                <input
+                  class="gn-footer__input"
+                  type="email"
+                  name="contact[email]"
+                  value="{{ form.email }}"
+                  placeholder="{{ block.settings.placeholder | default: 'Your email' }}"
+                  aria-required="true"
+                  autocomplete="email"
+                  required
+                >
+                <button type="submit" class="gn-footer__submit" aria-label="Subscribe">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M5 12h12.2l-4.3-4.3 1.4-1.4 6.7 6.7-6.7 6.7-1.4-1.4 4.3-4.3H5z"/></svg>
+                </button>
+              </div>
+              {%- if form.posted_successfully? -%}
+                <p class="gn-footer__message">{{ 'newsletter.success' | t }}</p>
+              {%- endif -%}
+            {%- endform -%}
+          </div>
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
+
+    <div class="gn-footer__divider"></div>
+
+    <div class="gn-footer__bottom">
+      <p class="gn-footer__copyright">
+        {%- if section.settings.copyright_text != blank -%}
+          {{ section.settings.copyright_text }}
+        {%- else -%}
+          &copy; {{ 'now' | date: '%Y' }} Golfer Now. All rights reserved.
+        {%- endif -%}
+      </p>
+    </div>
+  </div>
+</footer>
+
+{% schema %}
+{
+  "name": "GN Footer",
+  "class": "gn-footer-section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Logo"
+    },
+    {
+      "type": "range",
+      "id": "logo_width",
+      "min": 80,
+      "max": 220,
+      "step": 4,
+      "unit": "px",
+      "label": "Logo width",
+      "default": 140
+    },
+    {
+      "type": "textarea",
+      "id": "tagline",
+      "label": "Tagline",
+      "default": "Four tools with Instant feedback, designed to help you practice with purpose and play better, faster."
+    },
+    {
+      "type": "header",
+      "content": "Column headings"
+    },
+    {
+      "type": "text",
+      "id": "shop_heading",
+      "label": "Shop heading",
+      "default": "Shop"
+    },
+    {
+      "type": "text",
+      "id": "support_heading",
+      "label": "Support heading",
+      "default": "Support"
+    },
+    {
+      "type": "header",
+      "content": "Bottom bar"
+    },
+    {
+      "type": "text",
+      "id": "copyright_text",
+      "label": "Copyright text"
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background",
+      "default": "#1d3d2a"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "input_background",
+      "label": "Newsletter input background",
+      "default": "#f7f5ef"
+    },
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "margin_top",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "Space above footer",
+      "info": "Adds breathing room that matches the last section's background color.",
+      "default": 56
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 20,
+      "max": 120,
+      "step": 2,
+      "unit": "px",
+      "label": "Top padding",
+      "default": 64
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 20,
+      "max": 120,
+      "step": 2,
+      "unit": "px",
+      "label": "Bottom padding",
+      "default": 32
+    }
+  ],
+  "blocks": [
+    {
+      "type": "link",
+      "name": "Link",
+      "settings": [
+        {
+          "type": "select",
+          "id": "column",
+          "label": "Column",
+          "options": [
+            { "value": "shop", "label": "Shop" },
+            { "value": "support", "label": "Support" }
+          ],
+          "default": "shop"
+        },
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Label"
+        },
+        {
+          "type": "text",
+          "id": "url",
+          "label": "Link URL"
+        }
+      ]
+    },
+    {
+      "type": "newsletter",
+      "name": "Newsletter",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading",
+          "default": "Newsletter"
+        },
+        {
+          "type": "text",
+          "id": "description",
+          "label": "Description",
+          "default": "Tips, drills and product updates. No spam."
+        },
+        {
+          "type": "text",
+          "id": "placeholder",
+          "label": "Input placeholder",
+          "default": "Your email"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "GN Footer",
+      "blocks": [
+        { "type": "link", "settings": { "column": "shop", "label": "LINK ONE — Training Belt", "url": "/products/golf-training-belt" } },
+        { "type": "link", "settings": { "column": "shop", "label": "ARC ONE — Swing Trainer", "url": "/products/pro-swing-click-trainer" } },
+        { "type": "link", "settings": { "column": "shop", "label": "TRACE ONE — Detection Mat", "url": "/products/swing-detection-training-mat" } },
+        { "type": "link", "settings": { "column": "shop", "label": "LINE ONE — Putting Tutor", "url": "/products/golf-putting-tutor" } },
+        { "type": "link", "settings": { "column": "support", "label": "Contact", "url": "/pages/contact-us" } },
+        { "type": "link", "settings": { "column": "support", "label": "Privacy Policy", "url": "/policies/privacy-policy" } },
+        { "type": "link", "settings": { "column": "support", "label": "Terms of Service", "url": "/policies/terms-of-service" } },
+        { "type": "link", "settings": { "column": "support", "label": "Refund Policy", "url": "/policies/refund-policy" } },
+        { "type": "link", "settings": { "column": "support", "label": "Shipping Policy", "url": "/policies/shipping-policy" } },
+        { "type": "newsletter" }
+      ]
+    }
+  ]
+}
+{% endschema %}

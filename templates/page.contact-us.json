@@ -1,0 +1,170 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "contact": {
+      "type": "gn-contact-steps",
+      "blocks": {
+        "step_1": {
+          "type": "step",
+          "disabled": true,
+          "settings": {
+            "number": "1",
+            "title": "Tell us what's up",
+            "description": "Fill out the form with your question or order number."
+          }
+        },
+        "step_2": {
+          "type": "step",
+          "disabled": true,
+          "settings": {
+            "number": "2",
+            "title": "We take a look",
+            "description": "Our team reviews your message within a few hours."
+          }
+        },
+        "step_3": {
+          "type": "step",
+          "disabled": true,
+          "settings": {
+            "number": "3",
+            "title": "Get your answer",
+            "description": "We reply by email, usually within one business day."
+          }
+        },
+        "info_email": {
+          "type": "info",
+          "settings": {
+            "icon": "mail",
+            "label": "Email us",
+            "line1": "support@golfernow.com",
+            "line2": "We reply within 24 hours.",
+            "link": "mailto:support@golfernow.com"
+          }
+        },
+        "info_phone": {
+          "type": "info",
+          "settings": {
+            "icon": "phone",
+            "label": "Call us",
+            "line1": "+1 (833) 502-1618",
+            "line2": "Customer support",
+            "link": "tel:18335021618"
+          }
+        },
+        "info_hq": {
+          "type": "info",
+          "settings": {
+            "icon": "marker",
+            "label": "Our HQ",
+            "line1": "603 Richlands Cliff DR",
+            "line2": "Youngsville, NC 27596, USA",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "step_1",
+        "step_2",
+        "step_3",
+        "info_email",
+        "info_phone",
+        "info_hq"
+      ],
+      "settings": {
+        "eyebrow_text": "Get in touch",
+        "heading": "We're here to help.",
+        "description": "Have a question about our products or your order? We'd love to hear from you.",
+        "submit_label": "Send message",
+        "background_color": "#f7f5ef",
+        "text_color": "#1a1a1a",
+        "description_color": "#5c5c56",
+        "icon_color": "#1a1a1a",
+        "accent_color": "#1d3d2a",
+        "border_color": "#c9c6ba",
+        "steps_spacing": 56,
+        "header_spacing": 56,
+        "padding_top": 70,
+        "padding_bottom": 80
+      }
+    },
+    "faq": {
+      "type": "gn-contact-faq",
+      "blocks": {
+        "faq_1": {
+          "type": "faq",
+          "settings": {
+            "question": "How long does shipping take?",
+            "answer": "<p>Orders ship within 24-48 hours and typically arrive within 3-5 business days.</p>"
+          }
+        },
+        "faq_2": {
+          "type": "faq",
+          "settings": {
+            "question": "Which trainer should I start with?",
+            "answer": "<p>Most golfers start with ARC ONE — it's our flagship trainer and works well on its own or as part of the full system.</p>"
+          }
+        },
+        "faq_3": {
+          "type": "faq",
+          "settings": {
+            "question": "What's your return policy?",
+            "answer": "<p>You have 30 days to return any item, no questions asked, as long as it's unused and in its original packaging.</p>"
+          }
+        },
+        "faq_4": {
+          "type": "faq",
+          "settings": {
+            "question": "Can I use the trainers indoors?",
+            "answer": "<p>Yes, all of our tools are designed for both indoor practice mats and outdoor use.</p>"
+          }
+        },
+        "faq_5": {
+          "type": "faq",
+          "settings": {
+            "question": "Do I need a ball or net to use ARC ONE?",
+            "answer": "<p>No. ARC ONE is a swing trainer that works on its own — no ball, mat, or net required.</p>"
+          }
+        },
+        "faq_6": {
+          "type": "faq",
+          "settings": {
+            "question": "Do you ship internationally?",
+            "answer": "<p>Yes, we ship worldwide. Rates and delivery times are calculated at checkout based on your location.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_1",
+        "faq_2",
+        "faq_3",
+        "faq_4",
+        "faq_5",
+        "faq_6"
+      ],
+      "settings": {
+        "heading": "Frequently asked questions",
+        "background_color": "#f7f5ef",
+        "heading_color": "#1d3d2a",
+        "text_color": "#1a1a1a",
+        "answer_color": "#5c5c56",
+        "item_background": "#ffffff",
+        "border_color": "#e2ddcf",
+        "heading_spacing": 28,
+        "padding_top": 20,
+        "padding_bottom": 70
+      }
+    }
+  },
+  "order": [
+    "contact",
+    "faq"
+  ]
+}
