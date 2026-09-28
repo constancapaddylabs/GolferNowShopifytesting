@@ -35,8 +35,12 @@
     position: relative;
     margin: -20px 6px 0;
     padding: 34px 22px 20px;
-    border: 1px solid {{ section.settings.highlight_border_color | default: '#ec7901' }};
+    border: 1px solid transparent;
     border-radius: 8px;
+    transition: border-color 0.2s ease;
+  }
+  #shopify-section-{{ section.id }} .gn-bundles__col--highlighted:hover {
+    border-color: {{ section.settings.highlight_border_color | default: '#ec7901' }};
   }
   #shopify-section-{{ section.id }} .gn-bundles__col--highlighted + .gn-bundles__col {
     border-left: none;
