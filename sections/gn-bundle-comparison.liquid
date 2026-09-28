@@ -24,7 +24,8 @@
   #shopify-section-{{ section.id }} .gn-bundles__col {
     flex: 1 1 0;
     min-width: 0;
-    padding: 0 28px;
+    margin: -20px 6px 0;
+    padding: 34px 22px 20px;
     text-align: center;
     border-left: 1px solid {{ section.settings.divider_color | default: '#d2d3cc' }};
     border-radius: 8px;
@@ -38,8 +39,6 @@
   }
   #shopify-section-{{ section.id }} .gn-bundles__col--highlighted {
     position: relative;
-    margin: -20px 6px 0;
-    padding: 34px 22px 20px;
   }
   #shopify-section-{{ section.id }} .gn-bundles__col--highlighted + .gn-bundles__col {
     border-left: none;
