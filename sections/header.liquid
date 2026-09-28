@@ -45,6 +45,13 @@
     background: #2F3B2A;
     box-shadow: 0 12px 32px rgba(0,0,0,.22);
     overflow-y: auto;
+    /* This panel is tall, so the shared framework's slide-up-on-hover animation
+       (transition on `top`) gives a fast-moving cursor enough time to outrun the
+       panel and land on empty page space mid-slide, which drops the hover chain
+       and slams the menu shut. Land at the open position immediately and only
+       fade opacity, so there's no moving target for the mouse to lose. */
+    top: calc(100% + var(--header__submenu__top-offset, 10px)) !important;
+    transition: opacity var(--duration-medium) ease, visibility var(--duration-medium) ease !important;
   }
   .desktop-main-menu > ul.list-menu--inline > li.submenu-container > .submenu-design__simple > ul{
     display: flex;
